@@ -52,8 +52,11 @@ The notebook loads the dataset from:
 ### 5. Explore the Power BI Dashboard
 
 **View Dashboard (PDF)** — View both dashboard pages without installing Power BI.
+
 **Download Power BI Dashboard (.pbix)** — Open the editable dashboard in Power BI Desktop.
+
 **View Python Analysis Notebook** — Review the reproducible analysis and statistical testing.
+
 
 ### 6. Verify the Results
 
