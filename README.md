@@ -58,16 +58,33 @@ The notebook loads the dataset from:
 **View Python Analysis Notebook** — Review the reproducible analysis and statistical testing.
 
 
+
 ### 6. Verify the Results
 
-The notebook reproduces the descriptive statistics and statistical analysis supporting the Power BI dashboard.
+The project uses three complementary tools to support transparency, reproducibility, and independent validation:
 
-Expected results include:
+- **Python (Pandas and SciPy):** Performs data quality checks, descriptive analysis, and statistical testing.
+- **Power BI:** Visualises the findings through a two-page dashboard.
+- **Microsoft Excel:** Independently validates burnout counts and percentages using a PivotTable created from the original dataset.
 
-- Total respondents: 3,157
-- Overall high-burnout rate: 33.1%
-- Highest high-burnout rate: Remote (46.43%)
-- Chi-square statistic: 117.85
-- Cramer's V: 0.137
+The Excel workbook, [burnout_validation.xlsx](burnout_validation.xlsx), contains:
 
-These results should be reproducible using the included dataset and dependencies.
+- **Raw Data:** The original imported survey dataset.
+- **Burnout Validation:** A PivotTable comparing `Work_Arrangement` and `Burnout_Level`, displaying counts and percentages of row totals.
+
+#### Expected Results
+
+| Metric | Expected Value |
+|---|---|
+| Total respondents | 3,157 |
+| Overall high-burnout rate | 33.13% |
+| Remote high-burnout rate | 46.43% (273/588) |
+| Hybrid high-burnout rate | 35.75% (360/1,007) |
+| Onsite high-burnout rate | 26.44% (413/1,562) |
+| Chi-square statistic | 117.85 |
+| Cramer's V | 0.137 |
+
+The Excel PivotTable independently confirms the burnout counts and rates calculated in Python and presented in Power BI. The chi-square statistic and Cramer's V are reproduced using the Python notebook.
+
+Together, these tools provide a reproducible analytical workflow and allow the key findings to be cross-checked.
+
